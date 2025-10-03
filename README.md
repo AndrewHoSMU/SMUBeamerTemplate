@@ -9,6 +9,6 @@ This template provides a professional Beamer design that follows SMU's visual id
 ## Requirements
 
 - **XeLaTeX compiler** (required - will not work with pdfLaTeX or LuaTeX)
-- Reason: The template relies on the `fontspec` package for custom font support
+- Works best on ![Overleaf](template-source/overleaf-logo-primary.png).
 
 See [SMU_Beamer_Template.pdf](SMU_Beamer_Template.pdf) for more detailed instructions.
