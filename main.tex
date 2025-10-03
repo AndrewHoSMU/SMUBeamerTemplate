@@ -1,0 +1,95 @@
+\documentclass[12pt, aspectratio=169]{beamer}
+
+\usepackage{smu_beamer_template}
+
+% ====================================
+% TITLE PAGE
+% ====================================
+
+% The contents added to the top of the title. Usually the logo of the conference sponsor (e.g. SIAM) or your funder (e.g. NSF). You should treat it as a minislide above the title, in which you can add any figure or text, but have to take care of their alignment by your self (e.g. the template does not automatically align them at the center)
+\titletop{
+{\centering\includegraphics[height=0.12\textheight]{template-source/overleaf-logo-primary.png}\par you can specify this at \texttt{\textbackslash{}titletop\{...\}}\par}
+}
+
+\title[Presentation Title]{The Complete Title of Your Presentation}
+
+\subtitle{A Subtitle of Your Presentation (if you have one)}
+
+\author[Your Name]{Your Full Name}
+
+\institute[SMU Your Dept.]{Southern Methodist University, Your Department}
+
+% Your Email, your office address, your collaborators, or anything than you think your audience should know (leave blanck if you got nothing to say)
+\extrainfo{More info about you and your work, specified at \texttt{\textbackslash{}extrainfo\{...\}}}
+
+\date{\today}
+
+% SMU Logo for title page
+\titlegraphic{
+    \includegraphics[height=2.7cm]{template-source/SMU_DallasHall_Icon_outlined_CMYK_lightbg.eps}
+}
+
+% ====================================
+% DOCUMENT CONTENT
+% ====================================
+\begin{document}
+
+% Title slide
+\begin{frame}[plain]
+\titlepage
+\end{frame}
+
+% Table of contents
+\begin{frame}{Outline}
+\tableofcontents
+\end{frame}
+
+% ====================================
+% SECTION: INTRODUCTION
+% ====================================
+\section{Introduction}
+\subsection{Background Knowledge}
+
+\begin{frame}{Your Frame Title}
+\framesubtitle{Your Frame Subtitle}
+
+\begin{block}{About the frame title}
+You can simply use \texttt{\textbackslash{}insertsection}, \texttt{\textbackslash{}insertsubsection}, to use the section name "\insertsection" and subsection name "\insertsubsection" for your frame title and frame subtitle.
+\end{block}
+
+
+Okay, start to write about your awesome idea!
+\begin{itemize}
+    \item Be creative,
+    \item be confident,
+    \item be diligent,
+    \item \textcolor{SMURed}{\textbf{\serif Mustang Pride!}}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{References (Replace with your own ones)}
+\bibliographystyle{plain}  % or: alpha, ieeetr, apalike, abbrv
+\nocite{*}
+\bibliography{template-source/fake_references}
+\end{frame}
+
+{\setbeamertemplate{background}{}
+\begin{frame}
+\begin{tikzpicture}[remember picture, overlay]
+    % Image layer (between bg color and text)
+    \node[at=(current page.center), opacity=0.15, inner sep=0pt] {
+        \includegraphics[width=0.7\paperwidth]{template-source/Peruna_PMS_R.eps}
+    };
+\end{tikzpicture}
+
+% The frame background color is still there
+% Your text appears on top
+\centering
+{\serif\fontseries{head}\fontsize{40}{48}\selectfont\color{SMUBlue} THANK YOU!}
+\vskip11pt\par
+{\Huge \bf \serif\color{SMUBlue}Questions and Discussion}
+\\
+\end{frame}}
+
+
+\end{document}

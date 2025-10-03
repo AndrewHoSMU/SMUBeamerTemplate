@@ -1,0 +1,380 @@
+% SMU Beamer Template
+% Save as: smu_beamer_template.tex
+% This file contains all styling and formatting
+
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{comment}
+
+\newcommand\dout{\bgroup \markoverwith{\rule[0.2ex]{0.1pt}{0.4pt}\rule[0.8ex]{0.1pt}{0.4pt}}\ULon}
+
+% Font setup
+\newfontfamily\arial[
+    Path = template-source/Arial/,
+    UprightFont = ARIAL,
+    BoldFont = ARIALBD,
+    ItalicFont = ARIALI,
+    BoldItalicFont = ARIALBI,
+    Extension = .TTF
+]{Arial}
+
+\newfontfamily\tiempos[
+    Path = template-source/TiemposHeadline/,
+    UprightFont = *-Regular,
+    BoldFont = *-Semibold,
+    ItalicFont = *-RegularItalic,
+    BoldItalicFont = *-SemiboldItalic,
+    FontFace = {head}{n}{*-Bold},
+    FontFace = {head}{it}{*-BoldItalic},
+    Extension = .otf
+]{TiemposHeadline}
+
+\newfontfamily\sourceserif[
+    Path = template-source/SourceSerif4/,
+    UprightFont = *-Regular,
+    BoldFont = *-Bold,
+    ItalicFont = *-Italic,
+    BoldItalicFont = *-BoldItalic,
+    FontFace = {head}{n}{*-ExtraBold},
+    FontFace = {head}{it}{*-ExtraBoldItalic},
+    Extension = .ttf
+]{SourceSerif4}
+
+\def\serif{\tiempos}
+
+\setmonofont{JetBrainsMono}[
+    Path = template-source/JetBrainsMono/,
+    Extension = .ttf,
+    UprightFont = *-Regular,
+    BoldFont = *-Bold,
+    ItalicFont = *-Italic,
+    BoldItalicFont = *-BoldItalic,
+    Scale = 0.9
+]
+
+\newcommand{\sfsub}[1]{\texorpdfstring{{\sserif{#1}}}{#1}}
+\newcommand{\gsub}[1]{\texorpdfstring{{\georgia{#1}}}{#1}}
+
+% SMU Color Palette
+\definecolor{SMUGray}{RGB}{85,85,85}
+\definecolor{SMULightGray}{RGB}{245,245,245}
+\definecolor{SMUWhite}{RGB}{255,255,255}
+\definecolor{SMUBlue}{RGB}{53,76,161}      % Hex: 354CA1, PMS: 286
+\definecolor{SMURed}{RGB}{204,0,53}        % Hex: CC0035, PMS: 186
+\definecolor{SMUYellow}{RGB}{249,200,14}   % Hex: F9C80E, PMS: 7548
+\definecolor{SMUSalmon}{RGB}{255,16,83}    % Hex: FF1053, PMS: 192
+\definecolor{SMUTeal}{RGB}{89,195,195}     % Hex: 59C3C3, PMS: 325
+\definecolor{SMUBlack}{RGB}{38,38,38}      % Hex: 262626, PMS: 426
+
+% Beamer Theme Configuration
+\usetheme{Madrid}
+\usecolortheme{default}
+
+% Custom color settings
+\setbeamercolor{structure}{fg=SMUBlue}
+\setbeamercolor{palette primary}{bg=SMUBlue,fg=white}
+\setbeamercolor{palette secondary}{bg=SMUGray,fg=white}
+\setbeamercolor{palette tertiary}{bg=SMURed,fg=white}
+\setbeamercolor{palette quaternary}{bg=SMULightGray,fg=SMUBlue}
+
+% Title page colors
+\setbeamercolor{title}{fg=white}
+\setbeamercolor{subtitle}{fg=SMULightGray}
+\setbeamercolor{author}{fg=black}
+\setbeamercolor{institute}{fg=SMUGray}
+\setbeamercolor{date}{fg=SMUGray}
+\setbeamercolor{background canvas}{bg=white}
+
+
+
+\setbeamercolor{frametitle}{fg=white,bg=SMUBlue}
+\setbeamercolor{framesubtitle}{fg=SMULightGray}
+\setbeamercolor{normal text}{fg=black}
+\setbeamercolor{item}{fg=SMUBlue}
+\setbeamercolor{subitem}{fg=SMURed}
+\setbeamercolor{subsubitem}{fg=SMUGray}
+
+% Custom example block color to yellow
+% Block colors - using SMU palette
+\setbeamercolor{block title}{bg=SMUBlue,fg=white}
+\setbeamercolor{block body}{bg=SMUBlue!12,fg=black}
+
+% Alert block colors - using SMU Red
+\setbeamercolor{block title alerted}{bg=SMURed,fg=white}
+\setbeamercolor{block body alerted}{bg=SMURed!10,fg=black}
+
+% Example block colors - using SMU Teal
+\setbeamercolor{block title example}{bg=SMUYellow,fg=black}
+\setbeamercolor{block body example}{bg=SMUYellow!10,fg=black}
+
+% Beamer font settings
+\usefonttheme{professionalfonts}
+% \setbeamerfont{title}{family=\sserif, size=\LARGE, series=\fontseries{eb}}
+\setbeamerfont{title}{family=\serif, size=\LARGE, series=\fontseries{head}}
+\setbeamerfont{subtitle}{size=\large}
+\setbeamerfont{frametitle}{family=\serif, size=\LARGE, series=\bfseries}
+\setbeamerfont{framesubtitle}{size=\normalsize}
+\setbeamerfont{author}{family=\serif, size=\normalsize, series=\bfseries}
+\setbeamerfont{institute}{family=\serif, size=\small, series=\bfseries}
+\setbeamerfont{date}{size=\small}
+\setbeamerfont{section in toc}{family=\arial, series=\bfseries, size=\large}
+\setbeamerfont{subsection in toc}{family=\arial}
+% \setbeamerfont{author in head/foot}{family=\sserif}
+% \setbeamerfont{institute in head/foot}{family=\sserif}
+% \setbeamerfont{normal text}{family=\sserif}
+\setbeamerfont{block title}{series=\bfseries, size=\normalsize}
+\setbeamerfont{block title alert}{series=\bfseries, size=\normalsize}
+\setbeamerfont{block title example}{series=\bfseries, size=\normalsize}
+
+
+\setbeamerfont{normal text}{family=\arial}
+\AtBeginDocument{\usebeamerfont{normal text}}
+
+% Custom footer
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor,\hspace{1em}{\insertshortinstitute}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+\setbeamercolor{author in head/foot}{bg=SMUGray,fg=white}
+\setbeamercolor{title in head/foot}{bg=SMUBlue,fg=white}  
+\setbeamercolor{date in head/foot}{bg=SMURed,fg=white}
+
+% Add SMU logo to every frame (except title page)
+\setbeamertemplate{background}{
+  \ifnum\thepage>1\relax
+    \begin{tikzpicture}[remember picture, overlay]
+      \node[anchor=south east, xshift=-0.5cm, yshift=0.5cm, opacity=0.1] at (current page.south east) {
+        \includegraphics[width=0.47\textwidth]{template-source/DedmanCollegeofHumanities&Sciences_FormalHrz_PMS_BR.eps}
+      };
+    \end{tikzpicture}
+  \else
+  \fi
+}
+
+\newif\ifusecolorbg
+\newif\ifuselightheader
+
+% change this to \usecolorbgfalse if you don't want this back ground color.
+\usecolorbgtrue
+% \usecolorbgfalse
+
+% change this to \uselightheaderfalse if you don't want the line between the title and the content of each frame
+\uselightheadertrue
+% \uselightheaderfalse
+
+
+\ifuselightheader
+    \ifusecolorbg
+        \setbeamercolor{frametitle}{fg=SMUBlue!70!black,bg=SMUBlue!10}
+        \setbeamercolor{framesubtitle}{fg=SMUBlue!70!black,bg=SMUBlue!10}
+    \else
+        \setbeamercolor{frametitle}{fg=SMUBlue!70!black,bg=white}
+        \setbeamercolor{framesubtitle}{fg=SMUBlue!70!black,bg=white}
+    \fi
+    \addtobeamertemplate{frametitle}{}{%
+        \vspace{-0.5em}%
+        \textcolor{SMUBlue!95!black}{\rule{\linewidth}{0.8pt}}%
+        % \vspace{0.4em}%
+    }
+\fi
+
+\ifusecolorbg
+    \usebackgroundtemplate{%
+        \tikz[overlay,remember picture] \node[inner sep=0pt, outer sep=0pt, anchor=north, rectangle, 
+        top color=SMUBlue!10!white, bottom color=white, shading angle=0, 
+        minimum width=\paperwidth, minimum height=\paperheight] at (current page.north) {};
+    }
+\fi
+
+% Custom title page template with title at top, author info left, logo right
+% \defbeamertemplate*{title page}{customized}[1][]
+% {
+%   % ifdef titletop, insert titletop
+%   \vfill
+%   \begingroup
+%     % Title and subtitle centered at top
+%     \centering
+%     \begin{beamercolorbox}[sep=8pt,center,rounded=true,shadow=true,#1]{title}
+%       \usebeamerfont{title}\inserttitle\par%
+%       \ifx\insertsubtitle\@empty%
+%       \else%
+%         \vskip0.25em%
+%         {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
+%       \fi%     
+%     \end{beamercolorbox}%
+%     \vskip2em\par
+    
+%     % Author info on left, logo on right
+%     \begin{columns}
+%       % Left column for author, institute, date
+%       \begin{column}{0.75\textwidth}
+%         \begin{beamercolorbox}[sep=8pt,#1]{author}
+%           \usebeamerfont{author}\Large\insertauthor
+%         \end{beamercolorbox}
+%         \begin{beamercolorbox}[sep=8pt,#1]{institute}
+%           \usebeamerfont{institute}\insertinstitute
+%         \end{beamercolorbox}
+%         % ifdef extrainfo, insert extrainfo
+%         \begin{beamercolorbox}[sep=8pt,#1]{date}
+%           \usebeamerfont{date}\insertdate
+%         \end{beamercolorbox}
+%       \end{column}
+      
+%       % Right column for logo
+%       \begin{column}{0.25\textwidth}
+%         \centering
+%         {\usebeamercolor[fg]{titlegraphic}\inserttitlegraphic\par}
+%       \end{column}
+%     \end{columns}
+%   \endgroup
+%   \vfill
+% }
+
+% Define commands to store titletop and extrainfo
+\newcommand{\titletop}[1]{\def\inserttitletop{#1}}
+\newcommand{\extrainfo}[1]{\def\insertextrainfo{#1}}
+
+% Initialize them as empty
+\def\inserttitletop{}
+\def\insertextrainfo{}
+
+\defbeamertemplate*{title page}{customized}[1][]
+{
+  % Insert titletop if defined
+  \ifx\inserttitletop\@empty
+  \else
+      \inserttitletop
+  \fi
+  
+  \vfill
+  \begingroup
+    % Title and subtitle centered at top
+    \centering
+    \begin{beamercolorbox}[sep=8pt,center,rounded=true,shadow=true,#1]{title}
+      \usebeamerfont{title}\inserttitle\par%
+      \ifx\insertsubtitle\@empty%
+      \else%
+        \vskip0.25em%
+        {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
+      \fi%     
+    \end{beamercolorbox}%
+    % \vskip2em\par
+    % \vfill
+    \vspace{1em plus 2em}
+    
+    % Author info on left, logo on right
+    \begin{columns}
+      % Left column for author, institute, date
+      \begin{column}{0.75\linewidth}
+        \begin{beamercolorbox}[#1]{author}
+          \usebeamerfont{author}\Large\insertauthor
+        \end{beamercolorbox}
+        
+        \vspace{0.5em plus 5em}
+        
+        \begin{beamercolorbox}[#1]{institute}
+          \usebeamerfont{institute}\insertinstitute
+          
+          \ifx\insertextrainfo\@empty
+          \else
+          \insertextrainfo
+          \fi
+        \end{beamercolorbox}
+        
+        \vspace{0.5em plus 5em}
+        
+        \begin{beamercolorbox}[#1]{date}
+          \usebeamerfont{date}\insertdate
+        \end{beamercolorbox}
+      \end{column}
+      
+      % Right column for logo
+      \begin{column}{0.2\linewidth}
+        \centering
+        {\usebeamercolor[fg]{titlegraphic}\inserttitlegraphic\par}
+      \end{column}
+    \end{columns}
+  \endgroup
+  \vfill
+}
+
+
+% Remove navigation symbols
+\setbeamertemplate{navigation symbols}{}
+
+% Customize bullet points
+\setbeamertemplate{itemize items}[circle]
+\setbeamertemplate{enumerate items}[default]
+
+% Custom frame title format with subtitle support
+\begin{comment}
+\setbeamertemplate{frametitle}
+{
+    \nointerlineskip
+    \ifx\insertframesubtitle\@empty%
+        % Frame without subtitle - standard height
+        \begin{beamercolorbox}[sep=0.3cm,ht=1.5em,wd=\paperwidth]{frametitle}
+            \vbox{}\vskip-2ex%
+            \strut\usebeamerfont{frametitle}\insertframetitle\strut
+            \vskip-0.8ex%
+        \end{beamercolorbox}
+    \else%
+        % Frame with subtitle - taller box
+        \begin{beamercolorbox}[sep=0.3cm,ht=2.1em,wd=\paperwidth]{frametitle}
+            \vbox{}\vskip-2ex%
+            \strut\usebeamerfont{frametitle}\insertframetitle\strut
+            \par\vskip-0.8ex%
+            {\usebeamerfont{framesubtitle}\usebeamercolor[fg]{framesubtitle}\insertframesubtitle\strut}%
+            \vskip-0.8ex%
+        \end{beamercolorbox}
+    \fi%
+}
+\end{comment}
+
+% SMU Logo for title page
+\titlegraphic{
+    \includegraphics[height=2.7cm]{template-source/SMU_DallasHall_Icon_outlined_CMYK_lightbg.eps}
+}
+
+% inline code block
+\usepackage{tcolorbox}
+\newcommand{\code}[1]{\mbox{% added this percent
+    \ttfamily
+    \tcbox[
+        on line,
+        boxsep=0pt, left=4pt, right=4pt, top=2pt, bottom=1.5pt,
+        toprule=0pt, rightrule=0pt, bottomrule=0pt, leftrule=0pt,
+        oversize=0pt, enlarge left by=0pt, enlarge right by=0pt,
+        colframe=white, colback=black!12,
+        height=.8\baselineskip % added this (and guessed at .8)
+    ]{#1}% added this percent
+}}
+
+\input{template-source/codestyle}
+
+\setbeamerfont{bibliography item}{size=\footnotesize}
+\setbeamerfont{bibliography entry author}{size=\footnotesize}
+\setbeamerfont{bibliography entry title}{size=\footnotesize}
+\setbeamerfont{bibliography entry location}{size=\footnotesize}
+\setbeamerfont{bibliography entry note}{size=\footnotesize}
+
+% Allow text justifying (adjust the space gap to make text aligned at both the left and the right end for each line)
+\usepackage{ragged2e}
+\apptocmd{\frame}{}{\justifying}{} % Allow optional arguments after frame.
+
+\setlength{\parskip}{0.3em}

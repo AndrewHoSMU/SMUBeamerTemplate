@@ -1,0 +1,77 @@
+\usetikzlibrary{positioning}
+\begin{tikzpicture}[
+    font=\sffamily\small,
+    color box/.style={
+        minimum width=2cm,
+        minimum height=1.9cm,
+        draw=black!20,
+        line width=0.3pt,
+        align=center,
+        text width=1.8cm
+    }
+]
+
+% Title
+% \node[font=\large\bfseries] at (5, 3.3) {SMU Brand Color Palette};
+
+% PRIMARY COLORS Section
+\node[font=\small\bfseries, anchor=west] at (0, 2.6) {Primary Colors};
+
+% SMU Blue
+\node[color box, fill=SMUBlue, text=white, font=\tiny] at (1.2, 1.1) {
+    \textbf{\normalsize Blue}\\[0.2cm]
+    RGB: 53/76/161\\[0.05cm]
+    \texttt{\#354CA1}\\[0.05cm]
+    PMS 286
+};
+
+% SMU Red
+\node[color box, fill=SMURed, text=white, font=\tiny] at (3.4, 1.1) {
+    \textbf{\normalsize Red}\\[0.2cm]
+    RGB: 204/0/53\\[0.05cm]
+    \texttt{\#CC0035}\\[0.05cm]
+    PMS 186
+};
+
+% SECONDARY COLORS Section
+\node[font=\small\bfseries, anchor=west] at (5.4, 2.6) {Secondary Colors};
+
+% Yellow
+\node[color box, fill=SMUYellow, text=SMUBlack, font=\tiny, minimum width=1.6cm, minimum height=1.9cm, text width=1.4cm] at (6.4, 1.1) {
+    \textbf{\scriptsize Yellow}\\[0.1cm]
+    RGB:\\249/200/14\\[0.02cm]
+    \texttt{\#F9C80E}\\[0.02cm]
+    PMS 7548
+};
+
+% Salmon
+\node[color box, fill=SMUSalmon, text=white, font=\tiny, minimum width=1.6cm, minimum height=1.9cm, text width=1.4cm] at (8.2, 1.1) {
+    \textbf{\scriptsize Salmon}\\[0.1cm]
+    RGB:\\255/16/83\\[0.02cm]
+    \texttt{\#FF1053}\\[0.02cm]
+    PMS 192
+};
+
+% Teal
+\node[color box, fill=SMUTeal, text=SMUBlack, font=\tiny, minimum width=1.6cm, minimum height=1.9cm, text width=1.4cm] at (10, 1.1) {
+    \textbf{\scriptsize Teal}\\[0.1cm]
+    RGB:\\89/195/195\\[0.02cm]
+    \texttt{\#59C3C3}\\[0.02cm]
+    PMS 325
+};
+
+% Black
+\node[color box, fill=SMUBlack, text=white, font=\tiny, minimum width=1.6cm, minimum height=1.9cm, text width=1.4cm] at (11.8, 1.1) {
+    \textbf{\scriptsize Black}\\[0.1cm]
+    RGB:\\38/38/38\\[0.02cm]
+    \texttt{\#262626}\\[0.02cm]
+    PMS 426
+};
+
+% Vertical separator line
+\draw[gray, thick] (5.0, 0.1) -- (5.0, 2.8);
+
+% Footer note
+% \node[font=\small, text=black] at (6, -0.35) {};
+
+\end{tikzpicture}
