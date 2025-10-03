@@ -11,4 +11,4 @@ This template provides a professional Beamer design that follows SMU's visual id
 - **XeLaTeX compiler** (required - will not work with pdfLaTeX or LuaTeX)
 - Reason: The template relies on the `fontspec` package for custom font support
 
-See [SMU_Beamer_Template.pdf](https://github.com/AndrewHoSMU/SMUBeamerTemplate/blob/main/SMU_Beamer_Template.pdf) for more detailed instructions.
+See [SMU_Beamer_Template.pdf](SMU_Beamer_Template.pdf) for more detailed instructions.
