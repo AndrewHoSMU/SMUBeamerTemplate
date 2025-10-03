@@ -160,7 +160,6 @@ Follow SMU's color importance order:
 
 - Use **Salmon** for emphasis (with bold)
 - Use **Salmon** and **Teal** together to contrast concepts
-- Avoid Salmon and Teal in formal contexts
 
 ### Figure Backgrounds
 Remove white backgrounds from figures when using colored slide backgrounds for a more professional appearance.
@@ -169,16 +168,6 @@ Remove white backgrounds from figures when using colored slide backgrounds for a
 - **Serif**: Titles, subtitles, and special emphasis only
 - **Sans serif**: Body text, lists, tables, captions
 - **Math**: Keep default LaTeX serif for formulas
-
-## Examples Included
-
-The template includes several example frames demonstrating:
-- Multi-column layouts
-- Mathematical content (Calkin-Wilf Tree)
-- Complex tables (sorting algorithms comparison)
-- Figure handling and background removal
-- Code listings with syntax highlighting
-- Custom title and thank you pages
 
 ## License
 
