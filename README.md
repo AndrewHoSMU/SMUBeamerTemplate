@@ -1,6 +1,6 @@
 # SMU Beamer Template
 
-A simple LaTeX Beamer presentation template for Southern Methodist University (SMU) with official brand styling, including SMU-styled color themes and fonts.
+A simple LaTeX Beamer presentation template for Southern Methodist University (SMU) with official brand styling, including SMU-styled color themes and fonts. See [SMU_Beamer_Template.pdf](https://github.com/AndrewHoSMU/SMUBeamerTemplate/blob/main/SMU_Beamer_Template.pdf) for more detailed instructions.
 
 ## Overview
 
