@@ -9,6 +9,6 @@ This template provides a professional Beamer design that follows SMU's visual id
 ## Requirements
 
 - **XeLaTeX compiler** (required - will not work with pdfLaTeX or LuaTeX)
-- Works best on <img src="template-source/overleaf-logo-primary.png" height="16">.
+- Works best on <img src="template-source/overleaf-logo-primary.png" height="20">.
 
 See [SMU_Beamer_Template.pdf](SMU_Beamer_Template.pdf) for more detailed instructions.
